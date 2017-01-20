@@ -1,2 +1,0 @@
-LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
-LIBS += -lglfw3 -lglew
