@@ -1,0 +1,9 @@
+CXXFLAGS += -I/usr/local/include -I/opt/X11/include
+CXXFLAGS += -Wall -Wformat
+
+!cxx = |> clang %f $(CXXFLAGS) -c -o %o |> %B.o
+
+LIBS += -L/usr/local/lib -I/opt/X11/lib
+LIBS += -lc++
+
+.gitignore
