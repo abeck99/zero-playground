@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include "engine/ABApp.h"
 
 // Define some of the global variables we're using for this sample
 GLuint program;
@@ -23,6 +24,11 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 }
 
 int main() {
+  auto app = ZeroEngine::App(800, 600, "OpenGL");
+
+  app.DoSomething([] (const std::string& s) {printf("%s", s.c_str());} );
+
+
   // Initialize GLFW, and if it fails to initialize for any reason, print it out to STDERR.
   if (!glfwInit()) {
     fprintf(stderr, "Failed initialize GLFW.");

@@ -2,7 +2,9 @@ CXXFLAGS += -I/usr/local/include -I/opt/X11/include
 CXXFLAGS += -Wall -Wformat
 CXXFLAGS += -std=c++11
 
-!cxx = |> clang %f $(CXXFLAGS) -c -o %o |> %B.o
+ROOT = $(TUP_CWD)
+
+!cxx = | $(ROOT)/src/protos/*.h |> clang %f $(CXXFLAGS) -c -o %o |> %B.o
 
 LIBS += -L/usr/local/lib -I/opt/X11/lib
 LIBS += -lc++

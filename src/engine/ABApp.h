@@ -5,12 +5,15 @@
 #ifndef PROJECT_ABAPP_H
 #define PROJECT_ABAPP_H
 
+#include <string>
+#include <functional>
+
 namespace ZeroEngine {
-    class App {
-        App(int windowWidth, int windowHeight, const char* windowTitle);
-
-
-    };
+  class App {
+  public:
+    App(int windowWidth, int windowHeight, const char* windowTitle);
+    void DoSomething(std::function<void (const std::string&)> func);
+  };
 }
 
 #endif //PROJECT_ABAPP_H

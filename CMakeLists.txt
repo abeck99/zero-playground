@@ -25,7 +25,3 @@ target_link_libraries(haskell_game_engine ${OPEN_GL})
 target_link_libraries(haskell_game_engine ${COCOA})
 target_link_libraries(haskell_game_engine ${IOKIT})
 target_link_libraries(haskell_game_engine ${CORE_VIDEO})
-
-
-# LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
-# LIBS += -lglfw3 -lglew
