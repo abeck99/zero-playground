@@ -76,6 +76,8 @@ std::unique_ptr<World> Socket::Receive() {
       return std::unique_ptr<World>(world);
     }
 
+    printf("Failed to get message, it was sized: %lu\n", zmq_msg_size(msg));
+
     delete world;
   }
 
