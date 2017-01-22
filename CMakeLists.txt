@@ -4,11 +4,9 @@ project(haskell_game_engine)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES
-    build-release/src/protos/Person.capnp.c++
-    build-release/src/protos/Person.capnp.h
+        src/protos/world.pb.cc
     src/engine/ABApp.cpp
-    src/engine/ABApp.h
-    src/main.cpp)
+    src/main.cpp src/engine/ABVertexArray.cpp src/messaging/ABSocket.cpp src/messaging/ABSocket.h)
 
 add_executable(haskell_game_engine ${SOURCE_FILES})
 
@@ -20,6 +18,8 @@ find_library(CORE_VIDEO CoreVideo)
 
 target_link_libraries(haskell_game_engine glfw3)
 target_link_libraries(haskell_game_engine glew)
+target_link_libraries(haskell_game_engine zmq)
+target_link_libraries(haskell_game_engine protobuf)
 target_link_libraries(haskell_game_engine ${FOUNDATION})
 target_link_libraries(haskell_game_engine ${OPEN_GL})
 target_link_libraries(haskell_game_engine ${COCOA})

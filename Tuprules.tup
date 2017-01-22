@@ -10,5 +10,6 @@ LIBS += -L/usr/local/lib -I/opt/X11/lib
 LIBS += -lc++
 LIBS += -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 LIBS += -lglfw3 -lglew
+LIBS += -lzmq -lprotobuf
 
 .gitignore

@@ -1,4 +1,4 @@
 include_rules
 
-: foreach *.capnp |> capnp compile -oc++ %f |> %b.c++ %b.h
-: foreach *.c++ |> !cxx |>
+: foreach *.proto |> protoc --cpp_out=. --python_out=. %f |> %B.pb.cc %B.pb.h %B_pb2.py
+: foreach *.cc |> !cxx |>
