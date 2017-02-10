@@ -1,4 +1,4 @@
-{- This file was auto-generated from world.proto by the proto-lens-protoc program. -}
+{- This file was auto-generated from World.proto by the proto-lens-protoc program. -}
 {-# LANGUAGE ScopedTypeVariables, DataKinds, TypeFamilies,
   MultiParamTypeClasses, FlexibleContexts, FlexibleInstances,
   PatternSynonyms #-}
